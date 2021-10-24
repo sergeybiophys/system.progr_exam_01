@@ -8,5 +8,8 @@ namespace Domain.Entity
 {
     public class Manufacturer: BaseEntity<int>
     {
+        public string Name { get; set; }
+
+        List<Guitar> guitars { get; set; }
     }
 }

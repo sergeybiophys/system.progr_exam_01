@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Services.Abstract.DTO
 {
-    class NumberOfStringDTO
+    public class NumberOfStringDTO
     {
+        public int Id { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public string Number { get; set; }
     }
 }

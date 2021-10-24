@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Domain.Entity
 {
-    class NumberOfString
+    public class NumberOfString : BaseEntity<int> 
     {
+        public int Number { get; set; }
     }
 }

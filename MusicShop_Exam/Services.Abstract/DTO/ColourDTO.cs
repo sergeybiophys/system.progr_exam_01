@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Services.Abstract.DTO
 {
-    class ColourDTO
+    public class ColourDTO
     {
+        public int Id { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public string Name { get; set; }
     }
 }

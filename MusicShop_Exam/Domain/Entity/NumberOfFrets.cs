@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Domain.Entity
 {
-    class NumberOfFrets
+    public class NumberOfFrets : BaseEntity<int> 
     {
+        public int Number { get; set; }
     }
 }

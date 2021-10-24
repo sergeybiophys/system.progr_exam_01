@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Services.Abstract.DTO
 {
-    class KindDTO
+    public class KindDTO
     {
+        public int Id { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public string Name { get; set; }
     }
 }

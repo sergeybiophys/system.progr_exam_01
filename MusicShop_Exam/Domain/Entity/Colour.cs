@@ -8,5 +8,6 @@ namespace Domain.Entity
 {
     public class Colour: BaseEntity<int>
     {
+        public string Name { get; set; }
     }
 }

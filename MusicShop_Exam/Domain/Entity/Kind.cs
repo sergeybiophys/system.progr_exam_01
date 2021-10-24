@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Domain.Entity
 {
-    class Kind
+    public class Kind : BaseEntity<int> 
     {
+        public string Name { get; set; }
     }
 }

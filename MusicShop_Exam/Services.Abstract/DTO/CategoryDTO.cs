@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace Services.Abstract.DTO
 {
-    class CategoryDTO
+    public class CategoryDTO
     {
+        public int Id { get; set; }
+        public DateTime CreatedAt { get; set; }
+        public string Name { get; set; }
+        public virtual ICollection<GuitarDTO> Guitars { get; set; }
     }
 }

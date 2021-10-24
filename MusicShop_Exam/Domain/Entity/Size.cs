@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Domain.Entity
 {
-    class Size
+    public class Size : BaseEntity<int> 
     {
+        public string InstrumentSize { get; set; }
     }
 }

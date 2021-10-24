@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Domain.Entity
 {
-    class Pickup
+    public class Pickup:BaseEntity<int>
     {
+        public string Type { get; set; }
     }
 }
