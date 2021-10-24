@@ -5,7 +5,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="10.3.4" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="10.3.4" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="10.3.4" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Feature\" />
+    <Folder Include="Filters\" />
+    <Folder Include="Handlers\" />
+    <Folder Include="Helpers\" />
+    <Folder Include="Middlewares\" />
+    <Folder Include="Models\" />
   </ItemGroup>
 
 </Project>

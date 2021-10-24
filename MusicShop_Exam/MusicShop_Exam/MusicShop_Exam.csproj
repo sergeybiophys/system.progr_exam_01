@@ -9,6 +9,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Helpers\" />
+    <Folder Include="HtmlHelper\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Middlewares\" />
+    <Folder Include="Utils\" />
+    <Folder Include="Resources\" />
+    <Folder Include="Services\" />
     <Folder Include="wwwroot\img\" />
   </ItemGroup>
 
