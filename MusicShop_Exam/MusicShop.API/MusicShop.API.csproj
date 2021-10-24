@@ -12,6 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Controllers\" />
     <Folder Include="Feature\" />
     <Folder Include="Filters\" />
     <Folder Include="Handlers\" />
