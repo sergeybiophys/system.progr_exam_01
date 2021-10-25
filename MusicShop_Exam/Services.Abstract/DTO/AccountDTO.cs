@@ -33,7 +33,7 @@ namespace Services.Abstract.DTO
             }
             protected set { }
         }
-        public bool Status { get; set; }
+        public bool AccountStatus { get; set; }
 
     }
 }

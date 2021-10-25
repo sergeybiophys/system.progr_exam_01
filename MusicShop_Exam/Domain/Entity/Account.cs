@@ -30,6 +30,6 @@ namespace Domain.Entity
             }
             protected set { }
         }
-        public bool Status { get; set; }
+        public bool AccountStatus { get; set; }
     }
 }
