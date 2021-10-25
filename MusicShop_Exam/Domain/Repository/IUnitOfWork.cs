@@ -20,6 +20,7 @@ namespace Domain.Repository
         IRepository<int, Size> SizeRepository { get; }
         IRepository<int, GuitarType> TypeRepository { get; }
         IRepository<int, Status> StatusRepository { get; }
+        IRepository<Guid, Account> AccountRepository { get; }
 
         void SaveChanges();
 

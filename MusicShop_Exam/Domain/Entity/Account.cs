@@ -7,29 +7,29 @@ using System.Threading.Tasks;
 
 namespace Domain.Entity
 {
-    public class Account
+    public class Account:BaseEntity<Guid>
     {
-        [Unique]
-        public string Login { get; set; }
+        public string FirstName { get; set; }
+
+        public string LastName { get; set; }
 
         public string Password { get; set; }
 
+        [Unique]
         public string Phone { get; set; }
 
+        [Unique]
         public string Email { get; set; }
 
-        public bool Status { get; set; }
 
-        public Account() { }
-
-        public Account(string login, string pass,
-            string phone, string email, bool status)
+        public string Login
         {
-            this.Login = login;
-            this.Password = pass;
-            this.Phone = phone;
-            this.Email = email;
-            this.Status = status;
+            get
+            {
+                return this.Email;
+            }
+            protected set { }
         }
+        public bool Status { get; set; }
     }
 }
