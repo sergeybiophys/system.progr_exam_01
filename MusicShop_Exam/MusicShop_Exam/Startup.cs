@@ -50,9 +50,9 @@ namespace MusicShop_Exam
 
             string connectionString = Configuration.GetConnectionString("DefaultConnection");
 
-            services.AddDbContextPool<ApplicationDbContext>(options =>
+            services.AddDbContextPool<ApplicationDbContext>(optns =>
             {
-                options.Use
+                optns.UseSqlServer(connectionString);
             });
         }
 
