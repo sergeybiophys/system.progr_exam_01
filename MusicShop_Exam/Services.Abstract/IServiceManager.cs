@@ -8,6 +8,7 @@ namespace Services.Abstract
 {
     public interface IServiceManager
     {
+        IAccountService AccountService { get; }
         ICategoryService CategoryService { get; }
         IColourService ColourService { get; }
         IGuitarService GuitarService { get; }

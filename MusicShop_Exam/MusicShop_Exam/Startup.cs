@@ -1,8 +1,15 @@
+using AutoMapper;
+using Domain.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using MusicShop_Exam.Helpers;
+using Persistence;
+using Persistence.Repository;
+using Services;
+using Services.Abstract;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +31,29 @@ namespace MusicShop_Exam
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddScoped<IServiceManager, ServiceManager>();
+
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+            var mapperConfig = new MapperConfiguration(mc =>
+           {
+               mc.AddProfile(new MappingProfile());
+           });
+
+            IMapper mapper = mapperConfig.CreateMapper();
+            services.AddSingleton(mapper);
+
+
+
+
+
+            string connectionString = Configuration.GetConnectionString("DefaultConnection");
+
+            services.AddDbContextPool<ApplicationDbContext>(options =>
+            {
+                options.Use
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
