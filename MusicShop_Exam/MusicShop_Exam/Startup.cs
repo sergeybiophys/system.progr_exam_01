@@ -2,6 +2,7 @@ using AutoMapper;
 using Domain.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -37,12 +38,14 @@ namespace MusicShop_Exam
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             var mapperConfig = new MapperConfiguration(mc =>
-           {
-               mc.AddProfile(new MappingProfile());
-           });
+            {
+                mc.AddProfile(new MappingProfile());
+            });
 
             IMapper mapper = mapperConfig.CreateMapper();
             services.AddSingleton(mapper);
+
+            
 
 
 
@@ -52,7 +55,9 @@ namespace MusicShop_Exam
 
             services.AddDbContextPool<ApplicationDbContext>(optns =>
             {
+
                 optns.UseSqlServer(connectionString);
+
             });
         }
 

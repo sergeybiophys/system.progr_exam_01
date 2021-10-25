@@ -13,7 +13,7 @@ namespace Persistence
         public DbSet<Account> Account { get; set; }
 
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-            :base(options)
+            : base(options)
         {
             Database.EnsureCreated();
         }
