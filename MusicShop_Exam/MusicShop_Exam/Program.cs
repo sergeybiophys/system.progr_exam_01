@@ -15,32 +15,32 @@ namespace MusicShop_Exam
     {
         public static void Main(string[] args)
         {
-            //CreateHostBuilder(args).Build().Run();
-            var host = CreateHostBuilder(args).Build();
+            CreateHostBuilder(args).Build().Run();
+            //var host = CreateHostBuilder(args).Build();
 
-            CreateDbIfNotExists(host);
+            //CreateDbIfNotExists(host);
 
-            host.Run();
+            //host.Run();
         }
 
-        private static void CreateDbIfNotExists(IHost host)
-        {
-            using (var scope = host.Services.CreateScope())
-            {
-                var services = scope.ServiceProvider;
-                try
-                {
-                    var ctx = services.GetRequiredService<ApplicationDbContext>();
-                    DatabaseInitializer.Initialize(ctx);
-                }
-                catch (Exception ex)
-                {
-                    var logger = services.GetRequiredService<ILogger<Program>>();
-                    logger.LogError(ex, "An error occurred creating the DB.");
-                }
-                host.Run();
-            }
-        }
+        //private static void CreateDbIfNotExists(IHost host)
+        //{
+        //    using (var scope = host.Services.CreateScope())
+        //    {
+        //        var services = scope.ServiceProvider;
+        //        try
+        //        {
+        //            var ctx = services.GetRequiredService<ApplicationDbContext>();
+        //            DatabaseInitializer.Initialize(ctx);
+        //        }
+        //        catch (Exception ex)
+        //        {
+        //            var logger = services.GetRequiredService<ILogger<Program>>();
+        //            logger.LogError(ex, "An error occurred creating the DB.");
+        //        }
+        //        host.Run();
+        //    }
+        //}
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
