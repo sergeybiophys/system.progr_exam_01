@@ -12,10 +12,15 @@ namespace Persistence
     {
         public DbSet<Account> Account { get; set; }
 
+        //static ApplicationDbContext()
+        //{
+        //    Database.SetInitializer(new DatabaseInitializer());
+        //}
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
             Database.EnsureCreated();
+
         }
 
     }

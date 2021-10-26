@@ -13,6 +13,7 @@ namespace MusicShop_Exam.Helpers
         public MappingProfile()
         {
             CreateMap<Account, AccountDTO>().ReverseMap();
+        
         }
     }
 }

@@ -31,5 +31,17 @@ namespace Domain.Entity
             protected set { }
         }
         public bool AccountStatus { get; set; }
+
+        public Account()
+        { }
+        public Account(string firstname, string lastname, string password, string phone, string email, bool status)
+        {
+            this.FirstName = firstname;
+            this.LastName = lastname;
+            this.Password = password;
+            this.Phone = phone;
+            this.Email = email;
+            this.AccountStatus = status;
+        }
     }
 }

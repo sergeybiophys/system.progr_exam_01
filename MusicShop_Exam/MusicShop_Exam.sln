@@ -7,19 +7,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicShop_Exam", "MusicShop
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MusicShop.Core", "MusicShop.Core", "{0E6F3FCF-0EDF-4099-8CE6-DE0C74698516}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{B96A5DC3-CAC2-420E-90D5-96028DC94AE3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{B96A5DC3-CAC2-420E-90D5-96028DC94AE3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services.Abstract", "Services.Abstract\Services.Abstract.csproj", "{E77511D0-DDCF-4EDB-8EBB-71B66A8F4152}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services.Abstract", "Services.Abstract\Services.Abstract.csproj", "{E77511D0-DDCF-4EDB-8EBB-71B66A8F4152}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Services", "Services\Services.csproj", "{6138BFA8-99F5-44ED-910C-298F238798D4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Services", "Services\Services.csproj", "{6138BFA8-99F5-44ED-910C-298F238798D4}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MusicShop.Infrastucture", "MusicShop.Infrastucture", "{F68DC986-5A5B-4F37-BA3F-BC9669E2A42C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "Persistence\Persistence.csproj", "{EA3DAAFC-339A-487F-9E01-598AB53E6CC6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Persistence", "Persistence\Persistence.csproj", "{EA3DAAFC-339A-487F-9E01-598AB53E6CC6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentation", "Presentation\Presentation.csproj", "{78A9145C-7527-476A-B3F9-591E511BFBC3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Presentation", "Presentation\Presentation.csproj", "{78A9145C-7527-476A-B3F9-591E511BFBC3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicShop.API", "MusicShop.API\MusicShop.API.csproj", "{54C468B8-26D1-4C9A-A8D1-FD907EE46ADF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicShop.API", "MusicShop.API\MusicShop.API.csproj", "{54C468B8-26D1-4C9A-A8D1-FD907EE46ADF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

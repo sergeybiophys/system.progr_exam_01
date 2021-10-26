@@ -10,6 +10,6 @@ namespace Domain.Entity
     {
         public string Name { get; set; }
 
-        List<Guitar> guitars { get; set; }
+        public virtual ICollection<Guitar> Guitars { get; set; }
     }
 }

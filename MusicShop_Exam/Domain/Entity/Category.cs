@@ -9,6 +9,6 @@ namespace Domain.Entity
     public class Category:BaseEntity<int>
     {
         public string Name { get; set; }
-        List<Guitar> guitars { get; set; }
+        public virtual ICollection<Guitar> Guitars { get; set; }
     }
 }

@@ -10,6 +10,6 @@ namespace Services.Abstract.DTO
     {
         public int Id { get; set; }
         public DateTime CreatedAt { get; set; }
-        public string Number { get; set; }
+        public int Number { get; set; }
     } 
 }
