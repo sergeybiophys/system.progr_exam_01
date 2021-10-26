@@ -1,0 +1,7 @@
+https://stackoverflow.com/questions/37780136/asp-core-migrate-ef-core-sql-db-on-startup
+
+https://metanit.com/sharp/aspnet5/3.3.php
+
+https://hovermind.com/aspnet-core/seeding-database-on-application-startup.html#auto-migration
+
+https://www.entityframeworktutorial.net/code-first/database-initialization-strategy-in-code-first.aspx
