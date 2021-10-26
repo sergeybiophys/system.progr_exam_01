@@ -16,26 +16,58 @@ namespace Persistence.Repository
         {
             this.db = context;
         }
-        public IRepository<int, Guitar> GuitarsRepository => throw new NotImplementedException();
 
-        public IRepository<int, Category> CategoriesRepository => throw new NotImplementedException();
 
-        public IRepository<int, Manufacturer> ManufacturersRepository => throw new NotImplementedException();
 
-        public IRepository<int, Colour> ColoursRepository => throw new NotImplementedException();
+        IRepository<int, Guitar> _guitarRepository;
+        IRepository<int, Guitar> IUnitOfWork.GuitarsRepository
+            => _guitarRepository ?? (_guitarRepository = new GuitarRepository(db));
 
-        public IRepository<int, Kind> KindsRepository => throw new NotImplementedException();
 
-        public IRepository<int, NumberOfFrets> FretsRepository => throw new NotImplementedException();
+        IRepository<int, Category> _categoryRepository;
+        IRepository<int, Category> IUnitOfWork.CategoriesRepository
+            => _categoryRepository ?? (_categoryRepository = new CategoryRepository(db));
 
-        public IRepository<int, NumberOfString> StringsRepository => throw new NotImplementedException();
 
-        public IRepository<int, Pickup> PickupRepository => throw new NotImplementedException();
+        IRepository<int, Manufacturer> _manufRepository;
+        IRepository<int, Manufacturer> IUnitOfWork.ManufacturersRepository
+            => _manufRepository ?? (_manufRepository = new ManufacturerRepository(db));
 
-        public IRepository<int, Size> SizeRepository => throw new NotImplementedException();
 
-        public IRepository<int, GuitarType> TypeRepository => throw new NotImplementedException();
+        IRepository<int, Colour> _colourRepository;
+        IRepository<int, Colour> IUnitOfWork.ColoursRepository
+            => _colourRepository ?? (_colourRepository = new ColourRepository(db));
 
+
+        IRepository<int, Kind> _kindRepository;
+        IRepository<int, Kind> IUnitOfWork.KindsRepository
+            => _kindRepository ?? (_kindRepository = new KindsRepository(db));
+
+
+        IRepository<int, NumberOfFrets> _fretsRepository;
+        IRepository<int, NumberOfFrets> IUnitOfWork.FretsRepository
+            => _fretsRepository ?? (_fretsRepository = new FretsRepository(db));
+
+
+        IRepository<int, NumberOfString> _stringRepository;
+        IRepository<int, NumberOfString> IUnitOfWork.StringsRepository
+            => _stringRepository ?? (_stringRepository = new StringRepository(db));
+
+
+        IRepository<int, Pickup> _pickupRepository;
+        IRepository<int, Pickup> IUnitOfWork.PickupRepository
+            => _pickupRepository ?? (_pickupRepository = new PickupRepository(db));
+
+
+        IRepository<int, Size> _sizeRepository;
+        IRepository<int, Size> IUnitOfWork.SizeRepository
+            => _sizeRepository ?? (_sizeRepository = new SizeRepository(db));
+
+
+
+        IRepository<int, GuitarType> _typeRepository;
+        IRepository<int, GuitarType> IUnitOfWork.TypeRepository
+            => _typeRepository ?? (_typeRepository = new TypeRepository(db));
 
 
         IRepository<int, Status> _statusesRepository;
