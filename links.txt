@@ -5,3 +5,5 @@ https://metanit.com/sharp/aspnet5/3.3.php
 https://hovermind.com/aspnet-core/seeding-database-on-application-startup.html#auto-migration
 
 https://www.entityframeworktutorial.net/code-first/database-initialization-strategy-in-code-first.aspx
+
+https://docs.microsoft.com/en-us/aspnet/web-api/overview/data/using-web-api-with-entity-framework/part-3
