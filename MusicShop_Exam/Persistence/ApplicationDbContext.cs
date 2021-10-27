@@ -20,11 +20,9 @@ namespace Persistence
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
-
-            Database.EnsureDeleted();
+            //Database.EnsureDeleted();
             Database.EnsureCreated();
             
-
         }
 
         //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -32,23 +30,23 @@ namespace Persistence
         //    optionsBuilder.UseSqlServer(@"Server=(localdb)\\mssqllocaldb; Database=Music_Shop_Exam; Trusted_Connection=True;MultipleActiveResultSets=true");
         //}
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            string pass = Extension.GetHashPass("admin");
-            string pass2 = Extension.GetHashPass("service");
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
+        //    string pass = Extension.GetHashPass("admin");
+        //    string pass2 = Extension.GetHashPass("service");
 
 
 
-            var account1 = new Account("admin", "admin", pass, "+380500000123", "admin@mail.ru", true);
-            var account2 = new Account("service", "service", pass2, "+380661230001", "service@gmail.com", true);
+        //    var account1 = new Account("admin", "admin", pass, "+380500000123", "admin@mail.ru", true);
+        //    var account2 = new Account("service", "service", pass2, "+380661230001", "service@gmail.com", true);
 
 
 
-            modelBuilder.Entity<Account>().HasData(new Account[]
-            {
-                account1,
-                account2
-            });
-        }
+        //    modelBuilder.Entity<Account>().HasData(new Account[]
+        //    {
+        //        account1,
+        //        account2
+        //    });
+        //}
     }
 }
