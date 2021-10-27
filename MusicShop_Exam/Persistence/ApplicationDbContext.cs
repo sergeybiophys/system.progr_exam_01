@@ -21,15 +21,16 @@ namespace Persistence
             : base(options)
         {
 
-            //Database.EnsureDeleted();
+            Database.EnsureDeleted();
             Database.EnsureCreated();
+            
 
         }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            optionsBuilder.UseSqlServer(@"Server=(localdb)\\mssqllocaldb; Database=Music_Shop_Exam; Trusted_Connection=True;MultipleActiveResultSets=true");
-        }
+        //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        //{
+        //    optionsBuilder.UseSqlServer(@"Server=(localdb)\\mssqllocaldb; Database=Music_Shop_Exam; Trusted_Connection=True;MultipleActiveResultSets=true");
+        //}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -43,7 +44,7 @@ namespace Persistence
 
 
 
-            modelBuilder.Entity<Account>().HasData(new Account[] 
+            modelBuilder.Entity<Account>().HasData(new Account[]
             {
                 account1,
                 account2

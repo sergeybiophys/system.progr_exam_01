@@ -1,4 +1,6 @@
+using Domain.Entity;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -13,9 +15,11 @@ namespace MusicShop_Exam
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
+
+          
             //var host = CreateHostBuilder(args).Build();
 
             //CreateDbIfNotExists(host);
