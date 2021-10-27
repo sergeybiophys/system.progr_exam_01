@@ -30,23 +30,25 @@ namespace Persistence
         //    optionsBuilder.UseSqlServer(@"Server=(localdb)\\mssqllocaldb; Database=Music_Shop_Exam; Trusted_Connection=True;MultipleActiveResultSets=true");
         //}
 
-        //protected override void OnModelCreating(ModelBuilder modelBuilder)
-        //{
-        //    string pass = Extension.GetHashPass("admin");
-        //    string pass2 = Extension.GetHashPass("service");
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            string pass = Extension.GetHashPass("admin");
+            string pass2 = Extension.GetHashPass("service");
 
 
 
-        //    var account1 = new Account("admin", "admin", pass, "+380500000123", "admin@mail.ru", true);
-        //    var account2 = new Account("service", "service", pass2, "+380661230001", "service@gmail.com", true);
+            var account1 = new Account("admin", "admin", pass, "+380500000123", "admin@mail.ru", true);
+            var account2 = new Account("service", "service", pass2, "+380661230001", "service@gmail.com", true);
+            account1.Id = Guid.Parse("9bcd41ee-c9ab-4b89-8016-a30937449ab9");
+            account2.Id = Guid.Parse("48f9af64-2ecb-4f92-a911-90b6bc0d2c6f");
 
 
 
-        //    modelBuilder.Entity<Account>().HasData(new Account[]
-        //    {
-        //        account1,
-        //        account2
-        //    });
-        //}
+            modelBuilder.Entity<Account>().HasData(new Account[]
+            {
+                account1,
+                account2
+            });
+        }
     }
 }
