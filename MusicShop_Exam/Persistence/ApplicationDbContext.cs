@@ -14,7 +14,7 @@ namespace Persistence
         public DbSet<Account> Accounts { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Colour> Colours { get; set; }
-        //public DbSet<Guitar> Guitars { get; set; }
+        public DbSet<Guitar> Guitars { get; set; }
         public DbSet<GuitarType> GuitarTypes { get; set; }
         public DbSet<Kind> Kinds { get; set; }
         public DbSet<Manufacturer> Manufacturers { get; set; }
@@ -30,7 +30,7 @@ namespace Persistence
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
-            Database.EnsureDeleted();
+           // Database.EnsureDeleted();
             Database.EnsureCreated();
             
         }
@@ -64,7 +64,10 @@ namespace Persistence
                 Name = "guitar"
             };
 
-            modelBuilder.Entity<Category>().HasData(category1);
+            modelBuilder.Entity<Category>().HasData(new Category[]
+            {
+                category1
+            });
 
             var colour1 = new Colour
             {
@@ -131,7 +134,7 @@ namespace Persistence
                 Name = "Electro-Acoustic"
             };
 
-            modelBuilder.Entity<Guitar>().HasData(new GuitarType[]
+            modelBuilder.Entity<GuitarType>().HasData(new GuitarType[]
             {
                 type1,
                 type2,
@@ -329,9 +332,9 @@ namespace Persistence
                 Quantity = 10,
                 Image = "/img/black.jpg",
                 CategoryId = 1,
-                Category = category1,
+
                 ManufacturerId = 1,
-                Manufacturer = manuf1,
+
                 ColourId = 2,
                 GuitarTypeId = 3,
                 KindId = 2,
@@ -350,9 +353,9 @@ namespace Persistence
                 Quantity = 20,
                 Image = "/img/blackwhite1.jpg",
                 CategoryId = 1,
-                Category = category1,
+
                 ManufacturerId = 2,
-                Manufacturer = manuf2,
+
                 ColourId = 2,
                 GuitarTypeId = 3,
                 KindId = 2,
@@ -371,9 +374,9 @@ namespace Persistence
                 Quantity = 5,
                 Image = "/img/blue1.jpg",
                 CategoryId = 1,
-                Category = category1,
+
                 ManufacturerId = 3,
-                Manufacturer = manuf3,
+
                 ColourId = 7,
                 GuitarTypeId = 3,
                 KindId = 2,
@@ -393,9 +396,9 @@ namespace Persistence
                 Quantity = 5,
                 Image = "/img/brown1.jpg",
                 CategoryId = 1,
-                Category = category1,
+
                 ManufacturerId = 4,
-                Manufacturer = manuf4,
+
                 ColourId = 3,
                 GuitarTypeId = 1,
                 KindId = 1,
@@ -415,9 +418,9 @@ namespace Persistence
                 Quantity = 15,
                 Image = "/img/darkblue1.jpg",
                 CategoryId = 1,
-                Category = category1,
+
                 ManufacturerId = 5,
-                Manufacturer = manuf5,
+
                 ColourId = 7,
                 GuitarTypeId = 3,
                 KindId = 2,
@@ -437,9 +440,9 @@ namespace Persistence
                 Quantity = 15,
                 Image = "/img/darkred1.jpg",
                 CategoryId = 1,
-                Category = category1,
+
                 ManufacturerId = 6,
-                Manufacturer = manuf6,
+
                 ColourId = 4,
                 GuitarTypeId = 3,
                 KindId = 2,
@@ -458,9 +461,9 @@ namespace Persistence
                 Quantity = 25,
                 Image = "/img/darkred2.jpg",
                 CategoryId = 1,
-                Category = category1,
+
                 ManufacturerId = 1,
-                Manufacturer = manuf1,
+
                 ColourId = 4,
                 GuitarTypeId = 3,
                 KindId = 2,
@@ -479,9 +482,9 @@ namespace Persistence
                 Quantity = 10,
                 Image = "/img/green1.jpg",
                 CategoryId = 1,
-                Category = category1,
+
                 ManufacturerId = 2,
-                Manufacturer = manuf2,
+
                 ColourId = 6,
                 GuitarTypeId = 3,
                 KindId = 2,
@@ -519,9 +522,9 @@ namespace Persistence
                 Quantity = 10,
                 Image = "/img/red1.jpg",
                 CategoryId = 1,
-                Category = category1,
+
                 ManufacturerId = 3,
-                Manufacturer = manuf3,
+
                 ColourId = 4,
                 GuitarTypeId = 3,
                 KindId = 2,
@@ -539,9 +542,9 @@ namespace Persistence
                 Quantity = 10,
                 Image = "/img/white1.jpg",
                 CategoryId = 1,
-                Category = category1,
+
                 ManufacturerId = 4,
-                Manufacturer = manuf4,
+
                 ColourId = 1,
                 GuitarTypeId = 3,
                 KindId = 2,
@@ -559,9 +562,9 @@ namespace Persistence
                 Quantity = 10,
                 Image = "/img/yellow1.jpg",
                 CategoryId = 1,
-                Category = category1,
+
                 ManufacturerId = 5,
-                Manufacturer = manuf5,
+
                 ColourId = 5,
                 GuitarTypeId = 3,
                 KindId = 1,
@@ -572,21 +575,21 @@ namespace Persistence
                 Status = 2
             };
 
-            //modelBuilder.Entity<Guitar>().HasData(new Guitar[]
-            //{
-            //       guitar1,
-            //       guitar2,
-            //       guitar3,
-            //       guitar4,
-            //       guitar5,
-            //       guitar6,
-            //       guitar7,
-            //       guitar8,
-            //       guitar9,
-            //       guitar10,
-            //       guitar11,
-            //       guitar12,
-            // });
+            modelBuilder.Entity<Guitar>().HasData(new Guitar[]
+            {
+                   guitar1,
+                   guitar2,
+                   guitar3,
+                   guitar4,
+                   guitar5,
+                   guitar6,
+                   guitar7,
+                   guitar8,
+                   guitar9,
+                   guitar10,
+                   guitar11,
+                   guitar12,
+             });
         }
     }
 }
