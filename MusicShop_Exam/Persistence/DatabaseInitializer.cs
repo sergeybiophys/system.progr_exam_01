@@ -11,30 +11,30 @@ namespace Persistence
 {
     public class DatabaseInitializer
     {
-        public static void Initialize(ApplicationDbContext ctx)
-        {
-            ;
-            if (ctx.Account.Any())
-            {
-                return;
-            }
-            else
-            {
-                string pass = Extension.GetHashPass("admin");
-                string pass2 = Extension.GetHashPass("service");
+        //public static void Initialize(ApplicationDbContext ctx)
+        //{
+        //    ;
+        //    if (ctx.Account.Any())
+        //    {
+        //        return;
+        //    }
+        //    else
+        //    {
+        //        string pass = Extension.GetHashPass("admin");
+        //        string pass2 = Extension.GetHashPass("service");
 
 
 
-                var account1 = new Account("admin", "admin", pass, "+380500000123", "admin@mail.ru", true);
-                var account2 = new Account("service", "service", pass2, "+380661230001", "service@gmail.com", true);
+        //        var account1 = new Account("admin", "admin", pass, "+380500000123", "admin@mail.ru", true);
+        //        var account2 = new Account("service", "service", pass2, "+380661230001", "service@gmail.com", true);
 
-                ctx.Account.AddRange(new Account[] { account1, account2 });
-            }
+        //        ctx.Account.AddRange(new Account[] { account1, account2 });
+        //    }
 
 
 
-            ctx.SaveChanges();
-        }
+        //    ctx.SaveChanges();
+        //}
 
     }
 }
