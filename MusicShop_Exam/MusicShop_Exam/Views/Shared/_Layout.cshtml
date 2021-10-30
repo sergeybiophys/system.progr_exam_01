@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -216,8 +218,26 @@
                         </h2>
                         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
+                                @foreach(var item in ViewBag.manufs)
+                                    
+                                {
+
+                                    <div class="form-check">
+                                    <input class="form-check-input"
+                                           type="checkbox"
+                                           value="@item.Id"
+                                           id="flexCheckDefault" />
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                        @item.Name.ToUpper()
+                                    </label>
+                                </div>
+                                    
+                                }
+
+
+
                                 <!-- Default checkbox -->
-                                <div class="form-check">
+                                <!--<div class="form-check">
                                     <input class="form-check-input"
                                            type="checkbox"
                                            value=""
@@ -225,10 +245,10 @@
                                     <label class="form-check-label" for="flexCheckDefault">
                                         EPIPHONE
                                     </label>
-                                </div>
+                                </div>-->
 
                                 <!-- Default checkbox -->
-                                <div class="form-check">
+                                <!--<div class="form-check">
                                     <input class="form-check-input"
                                            type="checkbox"
                                            value=""
@@ -236,10 +256,10 @@
                                     <label class="form-check-label" for="flexCheckDefault">
                                         FENDER
                                     </label>
-                                </div>
+                                </div>-->
 
                                 <!-- Default checkbox -->
-                                <div class="form-check">
+                                <!--<div class="form-check">
                                     <input class="form-check-input"
                                            type="checkbox"
                                            value=""
@@ -247,9 +267,9 @@
                                     <label class="form-check-label" for="flexCheckDefault">
                                         GIBSON
                                     </label>
-                                </div>
+                                </div>-->
                                 <!-- Default checkbox -->
-                                <div class="form-check">
+                                <!--<div class="form-check">
                                     <input class="form-check-input"
                                            type="checkbox"
                                            value=""
@@ -257,9 +277,9 @@
                                     <label class="form-check-label" for="flexCheckDefault">
                                         GRETSCH
                                     </label>
-                                </div>
+                                </div>-->
                                 <!-- Default checkbox -->
-                                <div class="form-check">
+                                <!--<div class="form-check">
                                     <input class="form-check-input"
                                            type="checkbox"
                                            value=""
@@ -267,9 +287,9 @@
                                     <label class="form-check-label" for="flexCheckDefault">
                                         TAKAMINE
                                     </label>
-                                </div>
+                                </div>-->
                                 <!-- Default checkbox -->
-                                <div class="form-check">
+                                <!--<div class="form-check">
                                     <input class="form-check-input"
                                            type="checkbox"
                                            value=""
@@ -277,7 +297,7 @@
                                     <label class="form-check-label" for="flexCheckDefault">
                                         YAMAHA
                                     </label>
-                                </div>
+                                </div>-->
 
 
                             </div>

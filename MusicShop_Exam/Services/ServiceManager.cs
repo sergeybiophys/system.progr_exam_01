@@ -29,6 +29,8 @@ namespace Services
         public ServiceManager(IUnitOfWork unitOfWork, IMapper mapper)
         {
             _accountService = new Lazy<IAccountService>(() => new AccountService(unitOfWork, mapper));
+            _manufacturerService = new Lazy<IManufacturerService>(()=> new ManufacturerService(unitOfWork, mapper));
+
  
         }
 
@@ -42,7 +44,7 @@ namespace Services
 
         public IKindService KindService => throw new NotImplementedException();
 
-        public IManufacturerService ManufacturerService => throw new NotImplementedException();
+        public IManufacturerService ManufacturerService => _manufacturerService.Value;
 
         public INumOfFretsService NumOfFretsService => throw new NotImplementedException();
 

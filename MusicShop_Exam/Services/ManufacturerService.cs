@@ -21,7 +21,7 @@ namespace Services
             this.uow = uow;
             this.mapper = mapper;
         }
-        public ManufacturerDTO CreateNewMnufaturer(ManufacturerDTO manufacturer)
+        public ManufacturerDTO CreateNewManufacturer(ManufacturerDTO manufacturer)
         {
             var tmp = new Manufacturer
             {
@@ -35,7 +35,7 @@ namespace Services
             return mapper.Map<ManufacturerDTO>(tmp);
         }
 
-        public IEnumerable<ManufacturerDTO> GetAllMnufaturers()
+        public IEnumerable<ManufacturerDTO> GetAllManufacturers()
         {
             var mf = this.uow.ManufacturersRepository.GetAll();
 
@@ -48,7 +48,7 @@ namespace Services
             }).ToList();
         }
 
-        public ManufacturerDTO GetMnufaturerById(int id)
+        public ManufacturerDTO GetManufacturerById(int id)
         {
             var mf = this.uow.ManufacturersRepository.Get(id);
 
@@ -61,13 +61,13 @@ namespace Services
             };
         }
 
-        public void RemoveMnufaturerById(int id)
+        public void RemoveManufacturerById(int id)
         {
             this.uow.ManufacturersRepository.Remove(id);
             this.uow.SaveChanges();
         }
 
-        public ManufacturerDTO UpdateMnufaturer(ManufacturerDTO manufacturer)
+        public ManufacturerDTO UpdateManufacturer(ManufacturerDTO manufacturer)
         {
             var tmp = new Manufacturer
             {

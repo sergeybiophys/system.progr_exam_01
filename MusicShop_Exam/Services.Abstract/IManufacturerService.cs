@@ -9,10 +9,10 @@ namespace Services.Abstract
 {
     public interface IManufacturerService
     {
-        IEnumerable<ManufacturerDTO> GetAllMnufaturers();
-        ManufacturerDTO GetMnufaturerById(int id);
-        ManufacturerDTO UpdateMnufaturer(ManufacturerDTO manufacturer);
-        ManufacturerDTO CreateNewMnufaturer(ManufacturerDTO manufacturer);
-        void RemoveMnufaturerById(int id);
+        IEnumerable<ManufacturerDTO> GetAllManufacturers();
+        ManufacturerDTO GetManufacturerById(int id);
+        ManufacturerDTO UpdateManufacturer(ManufacturerDTO manufacturer);
+        ManufacturerDTO CreateNewManufacturer(ManufacturerDTO manufacturer);
+        void RemoveManufacturerById(int id);
     }
 }

@@ -7,6 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MusicShop_Exam.Helpers;
+using MusicShop_Exam.Services;
 using Persistence;
 using Persistence.Repository;
 using Services;
@@ -45,8 +46,8 @@ namespace MusicShop_Exam
             IMapper mapper = mapperConfig.CreateMapper();
             services.AddSingleton(mapper);
 
-            
 
+            services.AddTransient<IWebManufacturerService, WebManufacturerService>();
 
 
 
