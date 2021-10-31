@@ -1,5 +1,6 @@
 ﻿using MusicShop_Exam.Services.Colour;
 using MusicShop_Exam.Services.Fret;
+using MusicShop_Exam.Services.Guitar;
 using MusicShop_Exam.Services.Kind;
 using MusicShop_Exam.Services.Pickup;
 using MusicShop_Exam.Services.Size;
@@ -23,6 +24,7 @@ namespace MusicShop_Exam.Services
         private readonly Lazy<IWebStringService> _webStringService;
         private readonly Lazy<IWebSizeService> _webSizeService;
         private readonly Lazy<IWebPickupService> _webPickupService;
+        private readonly Lazy<IWebGuitarService> _webGuitarService;
 
         public WebServiceManager(IServiceManager serviceManager)
         {
@@ -34,7 +36,7 @@ namespace MusicShop_Exam.Services
             _webStringService = new Lazy<IWebStringService>(() => new WebStringService(serviceManager));
             _webSizeService = new Lazy<IWebSizeService>(() => new WebSizeService(serviceManager));
             _webPickupService = new Lazy<IWebPickupService>(() => new WebPickupService(serviceManager));
-
+            _webGuitarService = new Lazy<IWebGuitarService>(() => new WebGuitarService(serviceManager));
         }
 
 
@@ -47,6 +49,8 @@ namespace MusicShop_Exam.Services
         public IWebStringService webStringService => _webStringService.Value;
         public IWebPickupService webPickupService => _webPickupService.Value;
         public IWebSizeService webSizeService => _webSizeService.Value;
+
+        public IWebGuitarService webGuitarService => _webGuitarService.Value;
 
     }
 }

@@ -1,5 +1,6 @@
 ﻿using MusicShop_Exam.Services.Colour;
 using MusicShop_Exam.Services.Fret;
+using MusicShop_Exam.Services.Guitar;
 using MusicShop_Exam.Services.Kind;
 using MusicShop_Exam.Services.Pickup;
 using MusicShop_Exam.Services.Size;
@@ -22,5 +23,7 @@ namespace MusicShop_Exam.Services
         IWebStringService webStringService { get; }
         IWebPickupService webPickupService { get;  }
         IWebSizeService webSizeService { get; }
+
+        IWebGuitarService webGuitarService { get; }
     }
 }
