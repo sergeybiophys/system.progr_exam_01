@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using MusicShop_Exam.Models;
+using MusicShop_Exam.Models.Guitar;
 using MusicShop_Exam.Services;
 using System;
 using System.Collections.Generic;
@@ -25,6 +26,7 @@ namespace MusicShop_Exam.Controllers
         public IActionResult Index()
         {
 
+
             ViewBag.manufs = webServiceManager.webManufacturerService.GetAll().ToList();
             ViewBag.colours = webServiceManager.webColourService.GetAll().ToList();
             ViewBag.types = webServiceManager.webGuitarTypeService.GetAll().ToList();
@@ -33,6 +35,12 @@ namespace MusicShop_Exam.Controllers
             ViewBag.strings = webServiceManager.webStringService.GetAll().ToList();
             ViewBag.sizes = webServiceManager.webSizeService.GetAll().ToList();
             ViewBag.pickups = webServiceManager.webPickupService.GetAll().ToList();
+
+            var guitars = webServiceManager.webGuitarService.GetAll();
+            return View(new GuitarIndexViewModel
+            {
+                Guitars = this.webServiceManager.webGuitarService.GetAll()
+            });
 
             return View();
         }

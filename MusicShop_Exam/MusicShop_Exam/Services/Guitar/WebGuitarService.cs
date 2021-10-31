@@ -58,6 +58,7 @@ namespace MusicShop_Exam.Services.Guitar
                 PickupId = guitar.PickupId,
                 SizeId = guitar.SizeId,
                 Status = guitar.Status
+
             }).ToList();
         }
 

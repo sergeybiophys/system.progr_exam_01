@@ -37,6 +37,8 @@ namespace MusicShop_Exam
 
             services.AddScoped<IServiceManager, ServiceManager>();
 
+        
+
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             var mapperConfig = new MapperConfiguration(mc =>

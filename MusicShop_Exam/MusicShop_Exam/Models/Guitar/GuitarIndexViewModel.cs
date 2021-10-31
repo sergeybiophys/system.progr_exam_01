@@ -7,6 +7,6 @@ namespace MusicShop_Exam.Models.Guitar
 {
     public class GuitarIndexViewModel
     {
-        public List<GuitarViewModel> Gutars { get; set; }
+        public List<GuitarViewModel> Guitars { get; set; }
     }
 }

@@ -58,3 +58,19 @@ html {
   min-height: 100%;
 }
 
+/*developer settings
+----------------------------------------------------*/
+
+.people-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1%;
+}
+
+.category-info {
+    margin: 15px;
+}
+
+.category-action {
+    text-align: center;
+}
