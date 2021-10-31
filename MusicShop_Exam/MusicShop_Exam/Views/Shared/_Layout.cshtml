@@ -469,57 +469,71 @@
                         </h2>
                         <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                <!-- Default checkbox -->
-                                <div class="form-check">
-                                    <input class="form-check-input"
-                                           type="checkbox"
-                                           value=""
-                                           id="flexCheckDefault" />
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        WHITE
-                                    </label>
-                                </div>
+                                @foreach (var item in ViewBag.colours)
 
+                                {
+
+                                    <div class="form-check">
+                                        <input class="form-check-input"
+                                               type="checkbox"
+                                               value="@item.Id"
+                                               id="flexCheckDefault" />
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            @item.Name.ToUpper()
+                                        </label>
+                                    </div>
+
+                                }
                                 <!-- Default checkbox -->
-                                <div class="form-check">
-                                    <input class="form-check-input"
-                                           type="checkbox"
-                                           value=""
-                                           id="flexCheckDefault" />
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        BROWN
-                                    </label>
-                                </div>
+                                <!--<div class="form-check">
+        <input class="form-check-input"
+               type="checkbox"
+               value=""
+               id="flexCheckDefault" />
+        <label class="form-check-label" for="flexCheckDefault">
+            WHITE
+        </label>
+    </div>-->
                                 <!-- Default checkbox -->
-                                <div class="form-check">
-                                    <input class="form-check-input"
-                                           type="checkbox"
-                                           value=""
-                                           id="flexCheckDefault" />
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        BLACK
-                                    </label>
-                                </div>
+                                <!--<div class="form-check">
+        <input class="form-check-input"
+               type="checkbox"
+               value=""
+               id="flexCheckDefault" />
+        <label class="form-check-label" for="flexCheckDefault">
+            BROWN
+        </label>
+    </div>-->
                                 <!-- Default checkbox -->
-                                <div class="form-check">
-                                    <input class="form-check-input"
-                                           type="checkbox"
-                                           value=""
-                                           id="flexCheckDefault" />
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        CHAMPAGNE
-                                    </label>
-                                </div>
+                                <!--<div class="form-check">
+        <input class="form-check-input"
+               type="checkbox"
+               value=""
+               id="flexCheckDefault" />
+        <label class="form-check-label" for="flexCheckDefault">
+            BLACK
+        </label>
+    </div>-->
                                 <!-- Default checkbox -->
-                                <div class="form-check">
-                                    <input class="form-check-input"
-                                           type="checkbox"
-                                           value=""
-                                           id="flexCheckDefault" />
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        RED
-                                    </label>
-                                </div>
+                                <!--<div class="form-check">
+        <input class="form-check-input"
+               type="checkbox"
+               value=""
+               id="flexCheckDefault" />
+        <label class="form-check-label" for="flexCheckDefault">
+            CHAMPAGNE
+        </label>
+    </div>-->
+                                <!-- Default checkbox -->
+                                <!--<div class="form-check">
+        <input class="form-check-input"
+               type="checkbox"
+               value=""
+               id="flexCheckDefault" />
+        <label class="form-check-label" for="flexCheckDefault">
+            RED
+        </label>
+    </div>-->
                             </div>
                         </div>
                     </div>

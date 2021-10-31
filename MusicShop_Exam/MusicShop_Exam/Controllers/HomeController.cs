@@ -13,20 +13,21 @@ namespace MusicShop_Exam.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        readonly IWebManufacturerService manufacturerService;
+        readonly IWebServiceManager webServiceManager;
         public HomeController(ILogger<HomeController> logger,
-                              IWebManufacturerService manufacturerService)
+                              IWebServiceManager webServiceManager)
         {
             _logger = logger;
-            this.manufacturerService = manufacturerService;
+            this.webServiceManager = webServiceManager;
 
         }
 
         public IActionResult Index()
         {
 
-            ViewBag.manufs = manufacturerService.GetAll().ToList();
-            
+            ViewBag.manufs = webServiceManager.webManufacturerService.GetAll().ToList();
+            ViewBag.colours = webServiceManager.webColourService.GetAll().ToList();
+
             return View();
         }
 

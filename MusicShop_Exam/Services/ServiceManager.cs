@@ -30,13 +30,14 @@ namespace Services
         {
             _accountService = new Lazy<IAccountService>(() => new AccountService(unitOfWork, mapper));
             _manufacturerService = new Lazy<IManufacturerService>(()=> new ManufacturerService(unitOfWork, mapper));
+            _colourService = new Lazy<IColourService>(() => new ColourService(unitOfWork, mapper));
 
  
         }
 
         public ICategoryService CategoryService => throw new NotImplementedException();
 
-        public IColourService ColourService => throw new NotImplementedException();
+        public IColourService ColourService => _colourService.Value;
 
         public IGuitarService GuitarService => throw new NotImplementedException();
 

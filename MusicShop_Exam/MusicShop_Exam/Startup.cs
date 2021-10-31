@@ -8,6 +8,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using MusicShop_Exam.Helpers;
 using MusicShop_Exam.Services;
+using MusicShop_Exam.Services.Colour;
 using Persistence;
 using Persistence.Repository;
 using Services;
@@ -47,10 +48,10 @@ namespace MusicShop_Exam
             services.AddSingleton(mapper);
 
 
-            services.AddTransient<IWebManufacturerService, WebManufacturerService>();
+            //services.AddTransient<IWebManufacturerService, WebManufacturerService>();
+            //services.AddTransient<IWebColourService, WebColourService>();
 
-
-
+            services.AddTransient<IWebServiceManager, WebServiceManager>();
 
             string connectionString = Configuration.GetConnectionString("DefaultConnection");
 
