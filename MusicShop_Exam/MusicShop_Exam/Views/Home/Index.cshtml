@@ -24,7 +24,7 @@
 <a asp-action="Create">Create</a>
 @if (Model.Guitars.Count > 0)
 {
-    <div class="people-list">
+    <div class="people-list" style="display: flex; flex-wrap: wrap; justify-content: space-between;">
         @*@foreach (var person in people)
             {
                 <li>#@person.Id @person.LastName @person.FirstName @person.Birth</li>
