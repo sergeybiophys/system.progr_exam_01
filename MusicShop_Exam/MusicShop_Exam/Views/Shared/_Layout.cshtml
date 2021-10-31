@@ -299,27 +299,21 @@
                         </h2>
                         <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                <!-- Default checkbox -->
-                                <div class="form-check">
-                                    <input class="form-check-input"
-                                           type="checkbox"
-                                           value=""
-                                           id="flexCheckDefault" />
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        12
-                                    </label>
-                                </div>
+                                @foreach (var item in ViewBag.strings)
 
-                                <!-- Default checkbox -->
-                                <div class="form-check">
-                                    <input class="form-check-input"
-                                           type="checkbox"
-                                           value=""
-                                           id="flexCheckDefault" />
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        6
-                                    </label>
-                                </div>
+                                {
+
+                                    <div class="form-check">
+                                        <input class="form-check-input"
+                                               type="checkbox"
+                                               value="@item.Id"
+                                               id="flexCheckDefault" />
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            @item.Number.ToString().ToUpper()
+                                        </label>
+                                    </div>
+
+                                }
                             </div>
                         </div>
                     </div>
@@ -334,37 +328,23 @@
                         </h2>
                         <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                <!-- Default checkbox -->
-                                <div class="form-check">
-                                    <input class="form-check-input"
-                                           type="checkbox"
-                                           value=""
-                                           id="flexCheckDefault" />
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        3/4
-                                    </label>
-                                </div>
 
-                                <!-- Default checkbox -->
-                                <div class="form-check">
-                                    <input class="form-check-input"
-                                           type="checkbox"
-                                           value=""
-                                           id="flexCheckDefault" />
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        FULL-SIZE
-                                    </label>
-                                </div>
-                                <!-- Default checkbox -->
-                                <div class="form-check">
-                                    <input class="form-check-input"
-                                           type="checkbox"
-                                           value=""
-                                           id="flexCheckDefault" />
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        REDUCED
-                                    </label>
-                                </div>
+                                @foreach (var item in ViewBag.sizes)
+
+                                {
+
+                                    <div class="form-check">
+                                        <input class="form-check-input"
+                                               type="checkbox"
+                                               value="@item.Id"
+                                               id="flexCheckDefault" />
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            @item.InstrumentSize.ToUpper()
+                                        </label>
+                                    </div>
+
+                                }
+
                             </div>
                         </div>
                     </div>
@@ -410,37 +390,23 @@
                         </h2>
                         <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                <!-- Default checkbox -->
-                                <div class="form-check">
-                                    <input class="form-check-input"
-                                           type="checkbox"
-                                           value=""
-                                           id="flexCheckDefault" />
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        16
-                                    </label>
-                                </div>
 
-                                <!-- Default checkbox -->
-                                <div class="form-check">
-                                    <input class="form-check-input"
-                                           type="checkbox"
-                                           value=""
-                                           id="flexCheckDefault" />
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        18
-                                    </label>
-                                </div>
-                                <!-- Default checkbox -->
-                                <div class="form-check">
-                                    <input class="form-check-input"
-                                           type="checkbox"
-                                           value=""
-                                           id="flexCheckDefault" />
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        19
-                                    </label>
-                                </div>
+                                @foreach (var item in ViewBag.frets)
+
+                                {
+
+                                    <div class="form-check">
+                                        <input class="form-check-input"
+                                               type="checkbox"
+                                               value="@item.Id"
+                                               id="flexCheckDefault" />
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            @item.Number.ToString().ToUpper()
+                                        </label>
+                                    </div>
+
+                                }
+
                             </div>
                         </div>
                     </div>
@@ -456,37 +422,21 @@
                         </h2>
                         <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                <!-- Default checkbox -->
-                                <div class="form-check">
-                                    <input class="form-check-input"
-                                           type="checkbox"
-                                           value=""
-                                           id="flexCheckDefault" />
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        N/A
-                                    </label>
-                                </div>
+                                @foreach (var item in ViewBag.pickups)
 
-                                <!-- Default checkbox -->
-                                <div class="form-check">
-                                    <input class="form-check-input"
-                                           type="checkbox"
-                                           value=""
-                                           id="flexCheckDefault" />
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        PIEZO PICKUP
-                                    </label>
-                                </div>
-                                <!-- Default checkbox -->
-                                <div class="form-check">
-                                    <input class="form-check-input"
-                                           type="checkbox"
-                                           value=""
-                                           id="flexCheckDefault" />
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                        ELECTROMAGNETIC
-                                    </label>
-                                </div>
+                                {
+
+                                    <div class="form-check">
+                                        <input class="form-check-input"
+                                               type="checkbox"
+                                               value="@item.Id"
+                                               id="flexCheckDefault" />
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            @item.Type.ToUpper()
+                                        </label>
+                                    </div>
+
+                                }
                             </div>
                         </div>
                     </div>

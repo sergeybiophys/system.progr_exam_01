@@ -29,7 +29,10 @@ namespace MusicShop_Exam.Controllers
             ViewBag.colours = webServiceManager.webColourService.GetAll().ToList();
             ViewBag.types = webServiceManager.webGuitarTypeService.GetAll().ToList();
             ViewBag.kinds = webServiceManager.webKindService.GetAll().ToList();
-
+            ViewBag.frets = webServiceManager.webFretService.GetAll().ToList();
+            ViewBag.strings = webServiceManager.webStringService.GetAll().ToList();
+            ViewBag.sizes = webServiceManager.webSizeService.GetAll().ToList();
+            ViewBag.pickups = webServiceManager.webPickupService.GetAll().ToList();
 
             return View();
         }
