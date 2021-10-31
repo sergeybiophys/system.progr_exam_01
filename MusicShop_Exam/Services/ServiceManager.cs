@@ -31,31 +31,40 @@ namespace Services
             _accountService = new Lazy<IAccountService>(() => new AccountService(unitOfWork, mapper));
             _manufacturerService = new Lazy<IManufacturerService>(()=> new ManufacturerService(unitOfWork, mapper));
             _colourService = new Lazy<IColourService>(() => new ColourService(unitOfWork, mapper));
+            _guitarTypeService = new Lazy<IGuitarTypeService>(() => new GuitarTypeService(unitOfWork, mapper));
+            _guitarService = new Lazy<IGuitarService>(() => new GuitarService(unitOfWork, mapper));
+            _kindService = new Lazy<IKindService>(() => new KindService(unitOfWork, mapper));
+            _numOfFretsService = new Lazy<INumOfFretsService>(() => new NumFretsService(unitOfWork, mapper));
+            _numOfStringsService = new Lazy<INumOfStringsService>(() => new NumStringService(unitOfWork, mapper));
+            _pickupService = new Lazy<IPickupService>(() => new PickupService(unitOfWork, mapper));
+            _sizeService = new Lazy<ISizeService>(() => new SizeService(unitOfWork, mapper));
+            _statusService = new Lazy<IStatusService>(() => new StatusService(unitOfWork, mapper));
 
+            _categoryService = new Lazy<ICategoryService>(() => new CategoryService(unitOfWork, mapper));
  
         }
 
-        public ICategoryService CategoryService => throw new NotImplementedException();
+        public ICategoryService CategoryService => _categoryService.Value;
 
         public IColourService ColourService => _colourService.Value;
 
-        public IGuitarService GuitarService => throw new NotImplementedException();
+        public IGuitarService GuitarService => _guitarService.Value;
 
-        public IGuitarTypeService GuitarTypeService => throw new NotImplementedException();
+        public IGuitarTypeService GuitarTypeService => _guitarTypeService.Value;
 
-        public IKindService KindService => throw new NotImplementedException();
+        public IKindService KindService => _kindService.Value;
 
         public IManufacturerService ManufacturerService => _manufacturerService.Value;
 
-        public INumOfFretsService NumOfFretsService => throw new NotImplementedException();
+        public INumOfFretsService NumOfFretsService => _numOfFretsService.Value;
 
-        public INumOfStringsService NumOfStringsService => throw new NotImplementedException();
+        public INumOfStringsService NumOfStringsService => _numOfStringsService.Value;
 
-        public IPickupService PickupService => throw new NotImplementedException();
+        public IPickupService PickupService => _pickupService.Value;
 
-        public ISizeService SizeService => throw new NotImplementedException();
+        public ISizeService SizeService => _sizeService.Value;
 
-        public IStatusService StatusService => throw new NotImplementedException();
+        public IStatusService StatusService => _statusService.Value;
 
         public IAccountService AccountService => _accountService.Value;
     }

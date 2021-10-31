@@ -27,6 +27,9 @@ namespace MusicShop_Exam.Controllers
 
             ViewBag.manufs = webServiceManager.webManufacturerService.GetAll().ToList();
             ViewBag.colours = webServiceManager.webColourService.GetAll().ToList();
+            ViewBag.types = webServiceManager.webGuitarTypeService.GetAll().ToList();
+            ViewBag.kinds = webServiceManager.webKindService.GetAll().ToList();
+
 
             return View();
         }
