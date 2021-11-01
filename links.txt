@@ -7,3 +7,11 @@ https://hovermind.com/aspnet-core/seeding-database-on-application-startup.html#a
 https://www.entityframeworktutorial.net/code-first/database-initialization-strategy-in-code-first.aspx
 
 https://docs.microsoft.com/en-us/aspnet/web-api/overview/data/using-web-api-with-entity-framework/part-3
+
+-------------------------------------------------------------------------------------------------------
+
+https://stackoverflow.com/questions/42283295/implementing-checkbox-product-filters-asp-net-mvc-how-can-i-pass-data-in-colle
+
+https://stackoverflow.com/questions/57045810/posting-the-value-of-the-checkbox-for-a-list-of-items
+
+https://newbedev.com/how-do-i-implement-a-checkbox-list-in-asp-net-core
