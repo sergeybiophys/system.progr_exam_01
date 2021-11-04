@@ -22,14 +22,12 @@
 @if (Model.Guitars.Count > 0)
 {
     <div class="people-list" style="display: flex; flex-wrap: wrap; justify-content: space-between;">
-        @*@foreach (var person in people)
-            {
-                <li>#@person.Id @person.LastName @person.FirstName @person.Birth</li>
-            }*@
+
+
         @foreach (var guitar in Model.Guitars)
         {
             <div class="category-info">
-                @*#@person.Id @person.LastName @person.FirstName @person.Birth -*@
+
                 @await Html.PartialAsync("_Guitar0", guitar)
                 <div class="category-actions">
                     <a asp-action="Delete" asp-route-id="@guitar.Id">Delete</a> |
@@ -45,3 +43,5 @@ else
 {
     <h4>Guitars list is empty</h4>
 }
+
+

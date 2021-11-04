@@ -25,7 +25,7 @@ namespace MusicShop_Exam.Controllers
 
         public IActionResult Index()
         {
-
+     
 
             ViewBag.manufs = webServiceManager.webManufacturerService.GetAll().ToList();
             ViewBag.colours = webServiceManager.webColourService.GetAll().ToList();
@@ -37,12 +37,15 @@ namespace MusicShop_Exam.Controllers
             ViewBag.pickups = webServiceManager.webPickupService.GetAll().ToList();
 
             var guitars = webServiceManager.webGuitarService.GetAll();
+
+
+
             return View(new GuitarIndexViewModel
             {
                 Guitars = this.webServiceManager.webGuitarService.GetAll()
             });
 
-            return View();
+            //return View();
         }
 
         public IActionResult Privacy()
