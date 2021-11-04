@@ -12,15 +12,34 @@
 
 //    chkBxs.forEach(function (item) {
 //        //if (item.checked) {
-//            console.log(item.localName);
+//            console.log(item);
 //        //}
 //    });
 
-
 //}
 
-function Foo() {
-    //var overall = document.querySelectorAll('.form-check-input');
-    //overall.addEventListener('click', ChckBoxClick);
-    console.log('hell0');
-}
+///*ChckBoxClick();*/
+
+
+//function Foo() {
+//    var overall = document.querySelectorAll('.form-check-input');
+//    overall.addEventListener('click', ChckBoxClick);
+//    console.log('hell0');
+//}
+
+//Foo();
+
+$('.form-check-input').each(function () {
+    //console.log('start');
+    $(this).on('change', function () {
+
+        if ($(this).is(':checked')) {
+            console.log($(this).attr('name'));
+        }
+        else {
+            console.log(minus: $(this).attr('name'));
+        }
+    });
+    
+
+});

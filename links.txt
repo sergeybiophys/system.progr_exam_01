@@ -15,3 +15,7 @@ https://stackoverflow.com/questions/42283295/implementing-checkbox-product-filte
 https://stackoverflow.com/questions/57045810/posting-the-value-of-the-checkbox-for-a-list-of-items
 
 https://newbedev.com/how-do-i-implement-a-checkbox-list-in-asp-net-core
+
+-------------------------------------------------------------------------------------------------------
+
+https://question-it.com/questions/1910266/kak-obnovit-dannye-bez-perezagruzki-stranitsy-v-jadre-mvc-aspnet-s-pomoschju-ajax
