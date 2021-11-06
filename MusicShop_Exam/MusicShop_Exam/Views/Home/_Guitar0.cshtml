@@ -2,6 +2,7 @@
 
 @model GuitarViewModel
 
+
 <div class="card" style="width: 18rem;">
     <img src="@Model.Image" class="card-img-top" alt="...">
     <div class="card-body">
@@ -9,7 +10,17 @@
     </div>
     <div class="card-body">
         <h5>@Model.Price.ToString("c")</h5>
-        <h5>@Model.Status.ToString()</h5>
+        @{ 
+           // var manufacturer = null;
+            foreach(var item in ViewBag.manufs)
+            {
+                if(item.Id==Model.ManufacturerId)
+                {
+                 <h5>@item.Name</h5>
+                }
+            }
+        }
+        <h5></h5>
         <a href="#" class="card-link">Card link</a>
         <a href="#" class="card-link">Another link</a>
     </div>
